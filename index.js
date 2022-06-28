@@ -1,12 +1,12 @@
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
-const url = "mongodb://localhost:27017";
+const url = "mongodb+srv://admin:nnxfQmDOhnqCnZOZ@cluster0.qivfilw.mongodb.net/?retryWrites=true&w=majority7";
 const dbName = "ocean_bancodedados_27_06_2022";
 
 async function main() {
   // Conexão com o banco de dados
-/*
+
   console.log("Conectando ao banco de dados...");
 
   const client = await MongoClient.connect(url);
@@ -16,7 +16,7 @@ async function main() {
   const collection = db.collection("herois");
 
   console.log("Conexão realizada com sucesso!");
-*/
+
   // Aplicação Backend com Express
 
   const app = express();
@@ -88,8 +88,7 @@ async function main() {
     res.send("Item removido com sucesso.");
   });
 
-  app.listen(process.env.PORT || 3000,
-    , () =>
+  app.listen(process.env.PORT || 3000, () =>
     console.log("Servidor rodando em http://localhost:3000")
   );
 }
